@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    function pulodelinha() {
+
+        document.write("<br>")
+
+    }
+
+    function mostrar(texto){
+
+        document.write(texto);
+        pulodelinha();
+     }
+
+     var vitorias = parseInt(prompt("Entre com o numeros de vitorias")); // parseInt serve para transformar um string em numero.
+     var empates = parseInt(prompt("Entre com o numero de empates"));
+     var total = vitorias * 3 + empates;
+
+     mostrar("O total de pontos é " + total);
+
+    if (total > 28) {
+
+        mostrar("Seu time esta melhor que o ano passado");
+
+    }
+
+    if (total < 28) {
+
+        mostrar("Seu time esta pior que o ano passado");
+
+    }
+
+    if (total == 28) {
+
+        mostrar("O seu time esta igual ao ano passado");
+
+    }
+
+    mostrar("FIM.")
+
+</script>

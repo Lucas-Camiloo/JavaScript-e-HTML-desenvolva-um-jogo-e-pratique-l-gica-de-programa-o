@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+
+
+<h1>Jogo da adivinhação</h1>
+
+<script>
+    
+    function pulodelinha() {
+
+        document.write("<br>")
+
+    }
+
+    function mostrar(texto){
+
+        document.write(texto);
+        pulodelinha();
+
+    }
+
+    var sorteio = Math.round(Math.random() * 10)
+    
+
+    var chute = parseInt(prompt("Chute um numero de 0 a 10"))
+
+    var numero = 1
+
+    while (numero < 3) {
+    
+        if (sorteio == chute){
+
+            mostrar("Você acertou o numero pensado");
+            break;
+        }
+
+        else {
+        
+            // mostrar("Você errou, tente novamente");
+            alert("Você errou,tente novamente.")
+            numero++;
+            var chute = parseInt(prompt("Chute um numero de 0 a 10"))
+        }
+    }
+    
+    if (sorteio > chute) {
+
+        mostrar("O numero chutado foi menor do que o pensado, tente novamente")
+
+    }
+
+    if (sorteio == chute) {
+
+        mostrar("O numero foi o mesmo")
+
+    }
+    if (sorteio < chute) {
+
+    mostrar("O numero chutado foi maior do que o pensado, tente novamente")
+
+    }
+
+
+</script>
